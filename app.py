@@ -1,3 +1,5 @@
+# ...
+
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
@@ -5,7 +7,6 @@ import logging
 import pandas as pd
 import joblib
 from sklearn.preprocessing import StandardScaler
-
 
 app = Flask(__name__)
 LOG = create_logger(app)
@@ -24,21 +25,19 @@ def home():
     html = "<h3>Sklearn Prediction Home</h3>"
     return html.format(format)
 
-# TO DO:  Log out the prediction value
+# TO DO: Log out the prediction value
 @app.route("/predict", methods=['POST'])
 def predict():
     # Performs an sklearn prediction
     try:
-        # Load pretrained model as clf. Try any one model. 
-        # clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
-        # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
         clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
-    except FileNotFoundError:
-        LOG.info("JSON payload: %s json_payload")
-        return "Model file not found"
-    except joblib.JoblibFileNotFoundError:
-        LOG.info("JSON payload: %s json_payload")
-        return "Error loading model file"
+    except OSError as e:
+        if e.errno == 2:  # errno 2 indicates FileNotFoundError
+            LOG.info("JSON payload: %s json_payload")
+            return "Model file not found"
+        else:
+            LOG.info("JSON payload: %s json_payload")
+            return "Error loading model file"
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
