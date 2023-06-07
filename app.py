@@ -6,6 +6,8 @@ import pandas as pd
 import joblib
 from sklearn.preprocessing import StandardScaler
 
+from joblib import JoblibFileError
+
 app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
@@ -32,9 +34,12 @@ def predict():
         # clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
         # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
         clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
-    except JoblibFileError:
+    except FileNotFoundError:
         LOG.info("JSON payload: %s json_payload")
-        return "Model not loaded: {}"
+        return "Model file not found"
+    except Exception:
+        LOG.info("JSON payload: %s json_payload")
+        return "Error loading model file"
 
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
