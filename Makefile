@@ -3,7 +3,9 @@ setup:
 
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -r requirements.txt &&\
+		pip install pytest-cov  # Install pytest-cov
+	
 
 test:
 	#python -m pytest -vv --cov=myrepolib tests/*.py
