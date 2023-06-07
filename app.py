@@ -36,7 +36,7 @@ def predict():
     except FileNotFoundError:
         LOG.info("JSON payload: %s json_payload")
         return "Model file not found"
-    except Exception:
+    except joblib.JoblibFileNotFoundError:
         LOG.info("JSON payload: %s json_payload")
         return "Error loading model file"
 
