@@ -2,7 +2,7 @@ setup:
 	python3 -m venv ~/.azure-devops-project2.1
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt &&\
+		pip install -r requirements.txt
 
 test:
 	#python -m pytest -vv --cov=myrepolib tests/*.py
