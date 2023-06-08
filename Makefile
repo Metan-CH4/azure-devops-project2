@@ -4,7 +4,8 @@ setup:
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt &&\
-		pip install pytest-cov  # Install pytest-cov
+		pip install pytest-cov  # Install pytest-cov &&\
+		pip install locust
 	
 
 test:
