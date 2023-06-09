@@ -2,7 +2,7 @@ import time
 from locust import HttpUser, task, between
 
 class WebsiteTestUser(HttpUser):
-    wait_time = between(0.5, 3.0)
+    wait_time = between(1, 3)
 
     def on_start(self):
         """ on_start is called when a Locust start before any task is scheduled """
