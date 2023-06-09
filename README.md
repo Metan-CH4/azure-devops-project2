@@ -19,7 +19,8 @@ A [spreadsheet](project-schedule-h.xlsx) to manage the project plan.
 ## Instructions
 
 Here is an architectural diagram:
-![arch diagram](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/diagram.png?raw=true)
+
+![diagram](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/diagram.png?raw=true)
 
 ## Deploy the app in Azure Cloud Shell
 
