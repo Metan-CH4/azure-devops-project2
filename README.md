@@ -131,6 +131,11 @@ Open a browser and go to [http://localhost:8089](http://localhost:8089) then cli
 ![screenshot-loadtest#2](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/10%20-%20Load%20test%20%232.png?raw=true)
 ![screenshot-loadtest#3](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/evidences/11%20-%20Load%20test%20%233.png?raw=true)
 
+## Future Enhancements
+- Creating a UI for making predictions.
+- Adding test cases.
+- Deploying my app with AKS.
+
 ## Demo 
 Demo Video on Youtube 
 https://youtu.be/MPYaTCGu-DA
