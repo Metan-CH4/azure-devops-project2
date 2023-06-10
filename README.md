@@ -69,6 +69,8 @@ Make change and test GitHub action
 
 Create an App Service in Azure. 
 
+Use this [file](https://github.com/Metan-CH4/azure-devops-project2.1/blob/main/commands.sh) to create new App Services
+
 ```
 az webapp up -n azure-devops-project2
 ```
