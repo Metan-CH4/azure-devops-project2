@@ -10,7 +10,7 @@ This repositry demonstrate:
 
 If anything changed in it repository,  it will trigger the Github Action and also the Azure DevOps Pipelines to perform the CICD process and finally deploy to my app service.
 
-##Badge
+## Badge
 
 [![Python application test with Github Actions](https://github.com/Metan-CH4/azure-devops-project2.1/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/Metan-CH4/azure-devops-project2.1/actions/workflows/pythonapp.yml)
 
